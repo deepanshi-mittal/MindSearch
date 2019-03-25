@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+  <title>binary search</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+  <div id="index">
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark" style="text-align:center">
+		  <a class="navbar-brand" href="">ImagiNumber</a>
+		</nav>
+		<br/>
+		<br>
+		<br>
+	</div>
+  <div class="jumbotron">
+    <p>Imagine any number between 1 to 1000...</p>
+    <p>Use left and right arrows for finding the imagined number...<br>You will find your number on screen in 10 or less than 10 steps...</p>
+  </div>
+  <div id ="data" class = "row container" >
+		<i class = "fas fa-caret-left" style="color:green;font-size:100px;margin:50px" data-toggle="tooltip" data-placement="left" title="Press if number is small" onclick="msmall()"></i>
+    <input type="number" id="mn" value="500" style="text-align:center;">
+    <i class = "fas fa-caret-right" style="color:green;font-size:100px;margin:50px" data-toggle="tooltip" data-placement="right" title="Press if number is large" onclick="mlarge()"></i>
+  </div>
+  <br>
+  <div class="jumbotron">
+    <p>Stop when you'll see your number</p>
+  </div>
+  <script>
+  var small=500,large=0;
+    function msmall()
+    {
+      //small = document.getElementById('mn').value;
+      small=small/2;
+      small=Math.ceil(small);
+      if(large!=0){
+      large=large-small;}
+      else {
+        large=small;
+      }
+      document.getElementById('mn').value=large;
+    }
+    function mlarge()
+    {
+      large=document.getElementById('mn').value;
+      large=parseInt(large);
+        small=small/2;
+      small=Math.ceil(small);
+      large=large+small;
+      document.getElementById('mn').value=large;
+    }
+  </script>
+
+</body>
+</html>
