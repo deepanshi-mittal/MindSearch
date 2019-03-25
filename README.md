@@ -1,2 +1,2 @@
 # ImagiNumber
-Finding the imagined number
+Finding the imagined number using Binary Search
